@@ -14,7 +14,7 @@ Arithmetic operators are mathematical operators.
 
 - Addition(+): a + b
 - Subtraction(-): a - b
-- Multiplication(_): a _ b
+- Multiplication(*): a * b
 - Division(/): a / b
 - Modulus(%): a % b
 - Exponential(**): a ** b
@@ -64,6 +64,7 @@ console.log(NaN === NaN); // false
 
 As rule of thumb, if a value is not true with == it will not be equal with ===. Using === is safer than using ==.
 
+### 3. Logical Operators
 The following symbols are the common logical operators:
 
 &&(ampersand) operator

@@ -1,58 +1,60 @@
-// every browser have there own version of js, ecma script was created
-// it was adopted as the standard javascript
+// data type -> object 
 
-let word = "hello";
-word[1] = "r";
+// int x = 10 ;
 
-console.log(word); // hello - string is immutable
+// var 
+// let and const are block scope
+let variable = 10
+variable = 20
+const constant = 9
 
-const firstName = "Bhubnesh";
-const lastName = "Maharana";
+// constant = 12 
 
-let name = firstName + " " + lastName;
+// Primitive data type -> stack and immutable (we do overwritting)
+// Number
+let num = 10 
+num = 6
 
-console.log(name);
+let num2 = num
+num2 = 8
 
-const sub_string_1 = name.substr(9,8)
-const sub_string_2 = name.substring(9,)
+console.log(num2)
 
-console.table([sub_string_1,sub_string_2])
-console.log(name.split(" "))
+// String
+let str = "Hello"
+str = "World"
 
-let string = 'JavaScript'
+console.log(str)
 
-console.log(string.includes('Java')) // True 
-console.log(string.includes('java')) // False
+// Boolean
+let bool = true
 
+// Null
+let n = null
 
-console.log(string.indexOf('J')) // a
-console.log(string.indexOf('a')) // a
-console.log(string.indexOf('java')) // a
+// Undefined
+let unDefined 
 
-
-console.log(firstName.concat(lastName)) 
-
-// alert(), promt(), confirm()
-
-// alert("hello world")
-// prompt("Fuck You")
-// confirm("Are u a cat ?")
-
-
-let str = new Date()
-
-console.log(str.getDate())
+// Symbol
+let sym = Symbol('foo')
 
 
+// non-primitive data type -> heap and mutable
 
-let arr_1 = [1,2,3,4,5]
-let arr_2 = ['a','b','c','d','e']
+// array
+let arr = [1,2,3,4,5]
+// arr[0] = 0
 
-for( const num of arr_1){
-    console.log(num + " ")
-    for(const letter of arr_2){
-        if(letter == 'd') break
-        console.log(letter)
-        
-    }
+let arr2 = arr
+arr2[0] = 10
+
+console.log(arr,arr2)
+
+// object
+let obj = {
+    name : "Rohan",
+    age : 20
 }
+
+
+// Assignment : shallow copy and deep copy

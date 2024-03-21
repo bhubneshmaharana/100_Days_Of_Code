@@ -1,89 +1,140 @@
+// function - block of code that can be called and executed
 
+// function declaration
+// function name(params) {
+//     // block code 
+// }
 
-// function : a block of code that do some operations
-
-//function definition
-function Greet() {
-    console.log("welcome to JS")
+// function declaration
+function greet() {
+    console.log('Hello javaScript')
 }
 
-//function reference 
-Greet 
-//function call
-Greet() 
+// function call
+greet()
 
-var x = 10
+// parameterized function
+// function add(num1, num2){
+//     console.log(num1 + num2)
+// }
 
-// System Check 
-console.log(typeof(typeof x)) // String how 
-console.log(undefined + undefined)  // NaN
-console.log(x + undefined) // NaN
+// arguments
+// add(2,5)
 
-// parameterised function 
-function sum(num1, num2){
-    console.log(num1+num2)
-}
-
-sum(1,2) // 3
-sum(1,'1') // 11
-sum('1','1') // 11
-sum() // undefined 
-// when no parameter is passed then argument remains undefined
-
-// lets store the output of the function
-
-const result = sum(1,2) // 3
-console.log(result) // undefined
-
-// function return - 
-// 1. ends the function execution 
-function test(){
-    message = "this is function output."
-    return message
-    console.log(message)
-}
-
-const output  = test()
-console.log("sunction output :", output)
-
-// 2. specify the value to be returned to the function caller
-function sub(n,m){
-    return n>m ? n-m : m-n
-}
-
-const s1 = sub(9,2)  // 7
-const s2 = sub(1,2) // 1
-
-console.table([s1,s2])
- 
-  // if a function don't have a return expression then, it return undefined
-  // now we understand why sum() result was undefined
-
-// default parameter 
-function hello(userName = "bhubnesh"){
-     return `${userName}, welcome to the JavaScript !`
-}
-
-console.log(hello("Vamshi")) // vamshi, welcome to the JavaScript !
-console.log(hello()) // bhubnesh, welcome to the JavaScript !
-
-// arguments 
-// function overloading 
-function userCartCost() {
-    let totalCost = 0
-    for (const item of arguments){
-        totalCost += item
+// function overloading
+function add(num1=10){
+    let sum = 0
+    for (const num of arguments) {
+    sum += num
     }
-    return totalCost
+ //   console.log(arguments)
+ console.log(sum)
 }
 
-console.log(userCartCost(10,20,30)) // 60
-console.log(userCartCost(10,20,30,40,-50)) // 50
+add(2,5,7)
 
-// rest operator
-function user(firsName, secoundName, ...otherInformation){
-    return `${firsName} ${secoundName} bio : ${otherInformation}`
-
+// default parameter
+function greetUser(name = 'bhubnesh'){
+    console.log('Hello',name)
 }
 
-console.log(user("Bhubnesh", "Maharana", 24, "Odisha"))
+greetUser('sai')
+greetUser()
+
+// return statement -> return the value from the function
+let output = add(10,20)
+console.log(output) // undefined
+
+// if function dont have return statement then it will return undefined
+
+function diff(num1, num2){
+    return num1 > num2 ? num1 - num2 : num2 - num1
+}
+
+output = diff(5,10)
+console.log(output)
+
+
+// anonymous function
+// function(){
+//     console.log('hello')
+// }
+
+// function expression
+output = function(num1, num2){
+    return num1 * num2
+}
+
+console.log(output(5,10))
+
+// self invoking function
+output = (function(num1, num2){
+    return num1 * num2
+} (3,5)  )
+console.log(output)
+
+// arrow function
+output = (name= ' bhubnesh ') => {
+    console.log("hi ", name," this a arrow function")
+    return 
+}
+
+console.log(output('bhubensh'))
+
+output = (num1, num2) => num1+num2
+
+
+console.log(output(10,20))
+
+// diffrence function vs function
+let f_1 = function(){
+    console.log(this)
+}
+
+let f_2 = () => console.log(this)
+
+f_1()
+f_2()
+
+
+// arrow fuction overloading -> arrow dont't have arguments array
+output = (...args) => {
+    let result = 1
+    for (const n of args){
+        result *= n
+    }
+    return result
+}
+
+console.log(output(1,4,6,9))
+console.log(output(1,4))
+console.log(output())
+
+// object as parameter 
+let user = {
+    name : "bhubensh ",
+    age : 24
+}
+
+function userDeatil(user){
+    return `hello ${user.name} your age is ${user.age}`
+}
+
+console.log(userDeatil(user))
+
+// array as parameter 
+let arr = [1,2,3,4,5,6]
+
+function odd(num){
+    let odd = []
+
+    for (const n of num){
+        n%2 != 0 ? odd.push(n) : {}
+    }
+    return odd
+}
+
+console.log(odd(arr)) // [ 1, 3, 5 ]
+
+
+

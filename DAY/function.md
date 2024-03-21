@@ -11,8 +11,9 @@ Function makes code:
 A function can be declared or created in couple of ways:
 
 - _Declaration function_
-- _Expression function_
 - _Anonymous function_
+- _Expression function_
+- _Self Invoke function_
 - _Arrow function_
 
 ### Function Declaration

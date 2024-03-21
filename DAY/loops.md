@@ -2,16 +2,20 @@
 
 repeated execution of a block of code 
 
-### for Loop
+### for Loop 
+
+Mostly used for running iterative loop 
 
 ```js
 // For loop structure
-for(initialization, condition, updation){
+for(initialization, condition, updating){
   // code goes here
 }
 ```
 
 ### while loop
+
+Used in case of conditional looping 
 
 ```js
 //While loop structure
@@ -24,6 +28,8 @@ while (condition) {
 
 ### do while loop
 
+This is a exit control loop and the loop is executed at least one time 
+
 ```js
 initialisation
 do {
@@ -35,14 +41,28 @@ do {
 
 ### for of loop
 
+It a shorthand of 'for' loop introduces in ES6, used to iterate through the elements of object, array and string without index. 
+
 ```js
 for (const element of arr) {
   // code goes here
 }
 ```
 
+### for in loop 
 
-## Loop control Satatements
+It is similar of 'for of loop' but this is used to iterate through the indices of the var.
+
+```js
+for (const element of arr){
+  //codes goes here 
+}
+```
+
+
+## Loop control Statements
+
+These are some keywords used to manipulate the flow of the loop.
 
 ### break
 
